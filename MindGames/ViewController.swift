@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var incorrectPopup: UIImageView!
+    @IBOutlet weak var correctPopup: UIImageView!
+    
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var colorMeaningLabel: UILabel!
-    
     @IBOutlet weak var colorTextLabel: UILabel!
     
     let colorList = ["red","green","blue","purple"]
@@ -45,11 +46,49 @@ class ViewController: UIViewController {
         }
     }
     
+    func correctAnimationPopup(){
+        correctPopup.isHidden = false
+        correctPopup.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.correctPopup.transform = .identity
+        }) {(success) in
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.correctPopup.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            },
+                           completion: { _ in
+                            UIView.animate(withDuration: 0.3) {
+                                self.correctPopup.transform = CGAffineTransform(scaleX: 0, y: 0)
+                            }
+            })
+        }
+    }
+    
+    func incorrectAnimationPopup(){
+        incorrectPopup.isHidden = false
+        incorrectPopup.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.incorrectPopup.transform = .identity
+        }) {(success) in
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.incorrectPopup.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            },
+                           completion: { _ in
+                            UIView.animate(withDuration: 0.3) {
+                                self.incorrectPopup.transform = CGAffineTransform(scaleX: 0, y: 0)
+                            }
+            })
+        }
+    }
+    
+    
+    
     @IBAction func noButton(_ sender: Any) {
         if checkLogic(){
-            print("Incorrect")
+            incorrectAnimationPopup()
         }else{
-            print("Correct")
+            correctAnimationPopup()
             score += 10
         }
         generatePair()
@@ -58,10 +97,10 @@ class ViewController: UIViewController {
     
     @IBAction func yesButton(_ sender: Any) {
         if checkLogic(){
-            print("Correct")
+            correctAnimationPopup()
             score += 10
         }else{
-            print("Incorrect")
+            incorrectAnimationPopup()
         }
         generatePair()
         scoreLabel.text = String(score)
