@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBOutlet weak var colorMeaningLabel: UILabel!
     
     @IBOutlet weak var colorTextLabel: UILabel!
     
     let colorList = ["red","green","blue","purple"]
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +50,21 @@ class ViewController: UIViewController {
             print("Incorrect")
         }else{
             print("Correct")
+            score += 10
         }
         generatePair()
+        scoreLabel.text = String(score)
     }
     
     @IBAction func yesButton(_ sender: Any) {
         if checkLogic(){
             print("Correct")
+            score += 10
         }else{
             print("Incorrect")
         }
         generatePair()
+        scoreLabel.text = String(score)
     }
 }
 
