@@ -14,9 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorTextLabel: UILabel!
     
+    let colorList = ["red","green","blue","purple"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        generatePair()
     }
 
     var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
@@ -25,18 +28,37 @@ class ViewController: UIViewController {
     func generatePair(){
         randomColor = UIColor.random(from: [.red, .green, .blue, .purple])
         colorTextLabel.textColor = randomColor
-        colorMeaningLabel.text = randomColor?.name
+        colorTextLabel.text = colorList.randomElement()
+        colorMeaningLabel.text = colorList.randomElement()
+    }
+    
+    
+    func checkLogic() -> Bool{
+        let colorMeaning = colorMeaningLabel.text!
+        if colorMeaning == randomColor?.name{
+            return true
+        }else{
+            return false
+        }
     }
     
     @IBAction func noButton(_ sender: Any) {
+        if checkLogic(){
+            print("Incorrect")
+        }else{
+            print("Correct")
+        }
         generatePair()
     }
     
     @IBAction func yesButton(_ sender: Any) {
-        print("Yes")
+        if checkLogic(){
+            print("Correct")
+        }else{
+            print("Incorrect")
+        }
+        generatePair()
     }
-    
-    
 }
 
 extension UIColor {
