@@ -14,11 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var correctPopup: UIImageView!
     
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var colorMeaningLabel: UILabel!
     @IBOutlet weak var colorTextLabel: UILabel!
     
     let colorList = ["red","green","blue","purple"]
     var score = 0
+    var streakEnabled = false
+    var currentStreak = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,27 +86,49 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func noButton(_ sender: Any) {
         if checkLogic(){
             incorrectAnimationPopup()
+            score -= 10
+            streakEnabled = false
         }else{
             correctAnimationPopup()
             score += 10
+            streakEnabled = true
         }
+    
+        if streakEnabled{
+            currentStreak += 1
+        }else{
+            currentStreak = 0
+        }
+        
         generatePair()
         scoreLabel.text = String(score)
+        streakLabel.text = String(currentStreak)
     }
     
     @IBAction func yesButton(_ sender: Any) {
         if checkLogic(){
             correctAnimationPopup()
             score += 10
+            streakEnabled = true
         }else{
             incorrectAnimationPopup()
+            score -= 10
+            streakEnabled = false
         }
+        
+        if streakEnabled{
+            currentStreak += 1
+        }else{
+            currentStreak = 0
+        }
+        
         generatePair()
         scoreLabel.text = String(score)
+        streakLabel.text = String(currentStreak)
+        
     }
 }
 
