@@ -57,7 +57,9 @@ class ViewController: UIViewController {
                 self.timeLabel.shake()
             } else if time == 0{
                 timer.invalidate()
+                self.gameOver()
                 self.gameActive = false
+                
             }
         }
     }
@@ -113,6 +115,11 @@ class ViewController: UIViewController {
                             }
             })
         }
+    }
+    
+    
+    func gameOver(){
+        print("Game over, your score was", score)
     }
     
     
