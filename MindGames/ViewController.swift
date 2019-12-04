@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
 
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var colorTextLabel: UILabel!
     
     @IBOutlet weak var playButton: UIButton!
+    
     
     
     var gameActive = false
@@ -38,6 +41,20 @@ class ViewController: UIViewController {
 
     var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
     
+    func startCountdown(){
+        var time = 60
+        self.timeLabel.text = String(time)
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            time -= 1
+            self.timeLabel.text = String(time)
+
+            if time == 0 {
+                timer.invalidate()
+                print("Game Over!")
+            }
+        }
+    }
     
     func generatePair(){
         randomColor = UIColor.random(from: [.red, .green, .blue, .purple])
@@ -146,6 +163,7 @@ class ViewController: UIViewController {
         gameActive = true
         playButton.isHidden = true
         generatePair()
+        startCountdown()
     }
     
     
