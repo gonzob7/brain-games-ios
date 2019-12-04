@@ -163,9 +163,15 @@ class ViewController: UIViewController {
                 score += 10
                 streakEnabled = true
             }else{
-                incorrectAnimationPopup()
-                score -= 10
-                streakEnabled = false
+                if score > 0{
+                    incorrectAnimationPopup()
+                    score -= 10
+                    streakEnabled = false
+                }else{
+                    incorrectAnimationPopup()
+                    streakEnabled = false
+                }
+
             }
             
             if streakEnabled{
