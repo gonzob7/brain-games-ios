@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
+
     @IBOutlet weak var incorrectPopup: UIImageView!
     @IBOutlet weak var correctPopup: UIImageView!
     
@@ -17,6 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var colorMeaningLabel: UILabel!
     @IBOutlet weak var colorTextLabel: UILabel!
+    
+    @IBOutlet weak var playButton: UIButton!
+    
+    
+    var gameActive = false
     
     let colorList = ["red","green","blue","purple"]
     var score = 0
@@ -26,7 +34,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        generatePair()
     }
 
     var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
@@ -87,49 +94,61 @@ class ViewController: UIViewController {
     
     
     @IBAction func noButton(_ sender: Any) {
-        if checkLogic(){
-            incorrectAnimationPopup()
-            score -= 10
-            streakEnabled = false
-        }else{
-            correctAnimationPopup()
-            score += 10
-            streakEnabled = true
-        }
-    
-        if streakEnabled{
-            currentStreak += 1
-        }else{
-            currentStreak = 0
-        }
+        if gameActive{
+            if checkLogic(){
+                incorrectAnimationPopup()
+                score -= 10
+                streakEnabled = false
+            }else{
+                correctAnimationPopup()
+                score += 10
+                streakEnabled = true
+            }
         
-        generatePair()
-        scoreLabel.text = String(score)
-        streakLabel.text = String(currentStreak)
+            if streakEnabled{
+                currentStreak += 1
+            }else{
+                currentStreak = 0
+            }
+            
+            generatePair()
+            scoreLabel.text = String(score)
+            streakLabel.text = String(currentStreak)
+        }
     }
     
     @IBAction func yesButton(_ sender: Any) {
-        if checkLogic(){
-            correctAnimationPopup()
-            score += 10
-            streakEnabled = true
-        }else{
-            incorrectAnimationPopup()
-            score -= 10
-            streakEnabled = false
+        if gameActive{
+            if checkLogic(){
+                correctAnimationPopup()
+                score += 10
+                streakEnabled = true
+            }else{
+                incorrectAnimationPopup()
+                score -= 10
+                streakEnabled = false
+            }
+            
+            if streakEnabled{
+                currentStreak += 1
+            }else{
+                currentStreak = 0
+            }
+            
+            generatePair()
+            scoreLabel.text = String(score)
+            streakLabel.text = String(currentStreak)
         }
-        
-        if streakEnabled{
-            currentStreak += 1
-        }else{
-            currentStreak = 0
-        }
-        
-        generatePair()
-        scoreLabel.text = String(score)
-        streakLabel.text = String(currentStreak)
-        
     }
+    
+    
+    @IBAction func playButton(_ sender: Any) {
+        gameActive = true
+        playButton.isHidden = true
+        generatePair()
+    }
+    
+    
 }
 
 extension UIColor {
