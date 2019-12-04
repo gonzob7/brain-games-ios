@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: IBOutlets
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var noButton: UIButton!
@@ -26,23 +28,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     
     
-    
+    //MARK: Variables
+
     var gameActive = false
     
     let colorList = ["red","green","blue","purple"]
     var score = 0
     var streakEnabled = false
     var currentStreak = 0
+    var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
+
     
+    //MARK: ViewDidLoad
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
     
+    //MARK: Functions
     func startCountdown(){
-        var time = 25
+        var time = 20
         self.timeLabel.text = String(time)
         self.timeLabel.textColor = .green
         
@@ -50,7 +57,7 @@ class ViewController: UIViewController {
             time -= 1
             self.timeLabel.text = String(time)
             
-            if time == 20{
+            if time == 15{
                 self.timeLabel.textColor = .yellow
             } else if time <= 10 && time > 0{
                 self.timeLabel.textColor = .red
@@ -123,6 +130,8 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: IBActions
+    
     @IBAction func noButton(_ sender: Any) {
         if gameActive{
             if checkLogic(){
@@ -182,6 +191,7 @@ class ViewController: UIViewController {
     
 }
 
+//MARK: Extensions
 extension UIColor {
     static func random(from colors: [UIColor]) -> UIColor? {
         return colors.randomElement()
