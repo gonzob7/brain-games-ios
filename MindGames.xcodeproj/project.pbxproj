@@ -14,6 +14,7 @@
 		E048DE30238F7EFD005A43D4 /* MindGames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E048DE2E238F7EFD005A43D4 /* MindGames.xcdatamodeld */; };
 		E048DE32238F7EFF005A43D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E048DE31238F7EFF005A43D4 /* Assets.xcassets */; };
 		E048DE35238F7EFF005A43D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E048DE33238F7EFF005A43D4 /* LaunchScreen.storyboard */; };
+		E0EC67C1239835170043BAA0 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EC67C0239835170043BAA0 /* Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E048DE31238F7EFF005A43D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E048DE34238F7EFF005A43D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E048DE36238F7EFF005A43D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0EC67C0239835170043BAA0 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E048DE33238F7EFF005A43D4 /* LaunchScreen.storyboard */,
 				E048DE36238F7EFF005A43D4 /* Info.plist */,
 				E048DE2E238F7EFD005A43D4 /* MindGames.xcdatamodeld */,
+				E0EC67C0239835170043BAA0 /* Animations.swift */,
 			);
 			path = MindGames;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E048DE2A238F7EFD005A43D4 /* ViewController.swift in Sources */,
+				E0EC67C1239835170043BAA0 /* Animations.swift in Sources */,
 				E048DE26238F7EFD005A43D4 /* AppDelegate.swift in Sources */,
 				E048DE28238F7EFD005A43D4 /* SceneDelegate.swift in Sources */,
 				E048DE30238F7EFD005A43D4 /* MindGames.xcdatamodeld in Sources */,

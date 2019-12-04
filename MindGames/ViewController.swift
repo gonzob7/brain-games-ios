@@ -52,8 +52,9 @@ class ViewController: UIViewController {
             
             if time == 20{
                 self.timeLabel.textColor = .yellow
-            } else if time == 10{
+            } else if time <= 10 && time > 0{
                 self.timeLabel.textColor = .red
+                self.timeLabel.shake()
             } else if time == 0{
                 timer.invalidate()
                 self.gameActive = false
