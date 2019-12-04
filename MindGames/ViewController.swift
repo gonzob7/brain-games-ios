@@ -42,16 +42,21 @@ class ViewController: UIViewController {
     var randomColor = UIColor.random(from: [.red, .yellow, .green, .blue, .purple])
     
     func startCountdown(){
-        var time = 60
+        var time = 25
         self.timeLabel.text = String(time)
+        self.timeLabel.textColor = .green
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             time -= 1
             self.timeLabel.text = String(time)
-
-            if time == 0 {
+            
+            if time == 20{
+                self.timeLabel.textColor = .yellow
+            } else if time == 10{
+                self.timeLabel.textColor = .red
+            } else if time == 0{
                 timer.invalidate()
-                print("Game Over!")
+                self.gameActive = false
             }
         }
     }
