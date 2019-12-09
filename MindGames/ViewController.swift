@@ -133,6 +133,7 @@ class ViewController: UIViewController {
     
     func gameOver(){
         print("Game over, your score was", score)
+        self.performSegue(withIdentifier: "endScreen", sender: nil)
     }
     
     
