@@ -43,9 +43,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         gameActive = true
         generatePair()
         startCountdown()
+        resetScore()
     }
 
     
@@ -91,6 +95,13 @@ class ViewController: UIViewController {
         }else{
             return false
         }
+    }
+    
+    func resetScore(){
+        score = 0
+        scoreLabel.text = String(score)
+        currentStreak = 0
+        streakLabel.text = String(currentStreak)
     }
     
     func correctAnimationPopup(){
@@ -206,11 +217,6 @@ extension UIColor {
 extension UIColor {
     var name: String? {
         switch self {
-        case UIColor.black: return "black"
-        case UIColor.darkGray: return "darkGray"
-        case UIColor.lightGray: return "lightGray"
-        case UIColor.white: return "white"
-        case UIColor.gray: return "gray"
         case UIColor.red: return "red"
         case UIColor.green: return "green"
         case UIColor.blue: return "blue"
@@ -219,7 +225,6 @@ extension UIColor {
         case UIColor.magenta: return "magenta"
         case UIColor.orange: return "orange"
         case UIColor.purple: return "purple"
-        case UIColor.brown: return "brown"
         default: return nil
         }
     }
