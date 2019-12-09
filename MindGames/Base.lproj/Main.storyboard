@@ -38,38 +38,42 @@
                                     <constraint firstAttribute="height" constant="27" id="2iK-Gt-ejw"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-l6-qbq">
-                                <rect key="frame" x="209" y="813" width="170" height="49"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fW-l6-qbq" customClass="DesignableButton" customModule="MindGames" customModuleProvider="target">
+                                <rect key="frame" x="208.5" y="813" width="189.5" height="49"/>
+                                <color key="backgroundColor" red="0.207508385181427" green="0.80353027582168579" blue="0.24990946054458618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="pr9-eA-bz4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="YES">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="yesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30n-Fr-UP3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVV-Cl-ASq">
-                                <rect key="frame" x="36" y="813" width="170" height="49"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVV-Cl-ASq" customClass="DesignableButton" customModule="MindGames" customModuleProvider="target">
+                                <rect key="frame" x="16" y="813" width="189.5" height="49"/>
+                                <color key="backgroundColor" red="0.99951595067977905" green="0.47723180055618286" blue="0.46749788522720337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="DPc-Kq-0um"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="NO">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWq-2B-Tch"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-IV-Exm">
-                                <rect key="frame" x="90" y="741" width="234" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="PLAY">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7U-Te-ozr"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOR-gg-qax" customClass="UIViewRoundEdges" customModule="MindGames" customModuleProvider="target">
@@ -95,11 +99,22 @@
                                     <constraint firstAttribute="height" constant="27" id="8Nc-Sa-gNc"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-Ux-eWd">
-                                <rect key="frame" x="174" y="108" width="66" height="46.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-Ux-eWd" customClass="DesignableLabel" customModule="MindGames" customModuleProvider="target">
+                                <rect key="frame" x="159" y="104" width="97" height="63"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="51"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8y-Nf-bW1" customClass="DesignableButton" customModule="MindGames" customModuleProvider="target">
                                 <rect key="frame" x="54" y="350" width="307" height="128"/>
@@ -155,7 +170,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does the meaning match the text?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37t-ml-NFX">
-                                <rect key="frame" x="8" y="191" width="399" height="109.5"/>
+                                <rect key="frame" x="8" y="193.5" width="399" height="109.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -168,6 +183,34 @@
                                 <rect key="frame" x="132" y="426" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-lx-SeA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-IV-Exm" customClass="DesignableButton" customModule="MindGames" customModuleProvider="target">
+                                <rect key="frame" x="90" y="400" width="234" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23507982492446899" green="0.82119482755661011" blue="0.28523558378219604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7U-Te-ozr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.097935490310192108" green="0.098045043647289276" blue="0.097952447831630707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -176,8 +219,8 @@
                             <constraint firstItem="sD2-0D-gAE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="61" id="2AM-PG-yoH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5fW-l6-qbq" secondAttribute="bottom" id="3c3-i6-sUw"/>
                             <constraint firstItem="UOR-gg-qax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-32" id="4af-LF-kTi"/>
-                            <constraint firstItem="37t-ml-NFX" firstAttribute="top" secondItem="C5K-Ux-eWd" secondAttribute="bottom" constant="36.5" id="71j-f3-5Ub"/>
-                            <constraint firstItem="C5K-Ux-eWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="174" id="9wJ-vy-PtN"/>
+                            <constraint firstItem="37t-ml-NFX" firstAttribute="top" secondItem="C5K-Ux-eWd" secondAttribute="bottom" constant="28.5" id="71j-f3-5Ub"/>
+                            <constraint firstItem="C5K-Ux-eWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="9wJ-vy-PtN"/>
                             <constraint firstItem="OVV-Cl-ASq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AxB-pc-497"/>
                             <constraint firstItem="sD2-0D-gAE" firstAttribute="leading" secondItem="UOR-gg-qax" secondAttribute="trailing" constant="251" id="Cg9-tE-7dT"/>
                             <constraint firstItem="UOR-gg-qax" firstAttribute="bottom" secondItem="sD2-0D-gAE" secondAttribute="bottom" id="GLP-AQ-oeO"/>
@@ -187,16 +230,17 @@
                             <constraint firstItem="5fW-l6-qbq" firstAttribute="leading" secondItem="OVV-Cl-ASq" secondAttribute="trailing" constant="3" id="X4p-nt-gdE"/>
                             <constraint firstItem="37t-ml-NFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="bj6-fr-rbv"/>
                             <constraint firstItem="5fW-l6-qbq" firstAttribute="leading" secondItem="OVV-Cl-ASq" secondAttribute="trailing" constant="3" id="gb6-i9-2wG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C5K-Ux-eWd" secondAttribute="trailing" constant="174" id="iXb-3k-rxk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C5K-Ux-eWd" secondAttribute="trailing" constant="158" id="iXb-3k-rxk"/>
                             <constraint firstAttribute="trailing" secondItem="UOR-gg-qax" secondAttribute="trailing" constant="332" id="lKR-t3-O13"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5fW-l6-qbq" secondAttribute="trailing" constant="16" id="pNf-Ur-90Z"/>
                             <constraint firstItem="5fW-l6-qbq" firstAttribute="width" secondItem="OVV-Cl-ASq" secondAttribute="width" id="tNS-Vz-WwR"/>
                             <constraint firstItem="UOR-gg-qax" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="61" id="u4z-Cf-c2a"/>
-                            <constraint firstItem="C5K-Ux-eWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="uUO-HJ-kQJ"/>
+                            <constraint firstItem="C5K-Ux-eWd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="uUO-HJ-kQJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backingCover" destination="t4j-lx-SeA" id="u8M-1n-CIR"/>
                         <outlet property="colorMeaningLabel" destination="Fnu-LV-zya" id="shR-EK-U07"/>
                         <outlet property="colorTextLabel" destination="nVh-1K-Qxp" id="qM1-90-KAm"/>
                         <outlet property="colorTextView" destination="Dot-Fd-Gb7" id="qp5-Ze-RLt"/>

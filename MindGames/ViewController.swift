@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //MARK: IBOutlets
     
     @IBOutlet weak var colorTextView: DesignableButton!
+    @IBOutlet weak var backingCover: UIView!
     
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -195,6 +196,7 @@ class ViewController: UIViewController {
     @IBAction func playButton(_ sender: Any) {
         gameActive = true
         playButton.isHidden = true
+        backingCover.isHidden = true
         generatePair()
         startCountdown()
     }
