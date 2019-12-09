@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     //MARK: IBOutlets
     
+    @IBOutlet weak var colorTextView: DesignableButton!
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var noButton: UIButton!
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
 
     
     //MARK: Functions
+    
     func startCountdown(){
         var time = 20
         self.timeLabel.text = String(time)
@@ -76,6 +79,8 @@ class ViewController: UIViewController {
         colorTextLabel.textColor = randomColor
         colorTextLabel.text = colorList.randomElement()
         colorMeaningLabel.text = colorList.randomElement()
+        colorTextView.layer.borderColor = randomColor?.cgColor
+        
     }
     
     
