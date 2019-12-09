@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         var time = 20
         self.timeLabel.text = String(time)
         self.timeLabel.textColor = .green
-        
+        let generator = UINotificationFeedbackGenerator()
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             time -= 1
             self.timeLabel.text = String(time)
@@ -69,10 +69,12 @@ class ViewController: UIViewController {
             } else if time <= 10 && time > 0{
                 self.timeLabel.textColor = .red
                 self.timeLabel.shake()
+                generator.notificationOccurred(.error)
             } else if time == 0{
                 timer.invalidate()
                 self.gameOver()
                 self.gameActive = false
+                
                 
             }
         }
