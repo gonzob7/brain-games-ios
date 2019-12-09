@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     //MARK: IBOutlets
     
     @IBOutlet weak var colorTextView: DesignableButton!
-    @IBOutlet weak var backingCover: UIView!
     
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -27,9 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var colorMeaningLabel: UILabel!
     @IBOutlet weak var colorTextLabel: UILabel!
-    
-    @IBOutlet weak var playButton: UIButton!
-    
+        
     
     //MARK: Variables
 
@@ -47,6 +44,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        gameActive = true
+        generatePair()
+        startCountdown()
     }
 
     
@@ -193,14 +193,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func playButton(_ sender: Any) {
-        gameActive = true
-        playButton.isHidden = true
-        backingCover.isHidden = true
-        generatePair()
-        startCountdown()
-    }
     
     
 }
