@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var streakLabel: UILabel!
     @IBOutlet weak var colorMeaningLabel: UILabel!
     @IBOutlet weak var colorTextLabel: UILabel!
-        
-    
+            
     //MARK: Variables
 
     var gameActive = false
@@ -132,8 +131,8 @@ class ViewController: UIViewController {
     
     
     func gameOver(){
-        print("Game over, your score was", score)
         self.performSegue(withIdentifier: "endScreen", sender: nil)
+        
     }
     
     

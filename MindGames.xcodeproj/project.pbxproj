@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E01C77C4239E02F300F8D3CA /* UIViewRoundEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C77C3239E02F300F8D3CA /* UIViewRoundEdges.swift */; };
 		E01C77C6239E096D00F8D3CA /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C77C5239E096D00F8D3CA /* DesignableView.swift */; };
+		E01C77C8239EC69200F8D3CA /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C77C7239EC69200F8D3CA /* GameOverViewController.swift */; };
 		E048DE26238F7EFD005A43D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048DE25238F7EFD005A43D4 /* AppDelegate.swift */; };
 		E048DE28238F7EFD005A43D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048DE27238F7EFD005A43D4 /* SceneDelegate.swift */; };
 		E048DE2A238F7EFD005A43D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048DE29238F7EFD005A43D4 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		E01C77C3239E02F300F8D3CA /* UIViewRoundEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRoundEdges.swift; sourceTree = "<group>"; };
 		E01C77C5239E096D00F8D3CA /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		E01C77C7239EC69200F8D3CA /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		E048DE22238F7EFD005A43D4 /* MindGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E048DE25238F7EFD005A43D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E048DE27238F7EFD005A43D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				E0EC67C0239835170043BAA0 /* Animations.swift */,
 				E01C77C3239E02F300F8D3CA /* UIViewRoundEdges.swift */,
 				E01C77C5239E096D00F8D3CA /* DesignableView.swift */,
+				E01C77C7239EC69200F8D3CA /* GameOverViewController.swift */,
 			);
 			path = MindGames;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				E0EC67C1239835170043BAA0 /* Animations.swift in Sources */,
 				E01C77C4239E02F300F8D3CA /* UIViewRoundEdges.swift in Sources */,
 				E048DE26238F7EFD005A43D4 /* AppDelegate.swift in Sources */,
+				E01C77C8239EC69200F8D3CA /* GameOverViewController.swift in Sources */,
 				E01C77C6239E096D00F8D3CA /* DesignableView.swift in Sources */,
 				E048DE28238F7EFD005A43D4 /* SceneDelegate.swift in Sources */,
 				E048DE30238F7EFD005A43D4 /* MindGames.xcdatamodeld in Sources */,
