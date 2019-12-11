@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     //MARK: Variables
 
     var gameActive = false
-    
+    var finalScore: String = ""
     let colorList = ["red","green","blue","purple"]
     var score = 0
     var streakEnabled = false
@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         startCountdown()
         resetScore()
     }
+    
 
     
     //MARK: Functions
@@ -72,6 +73,7 @@ class ViewController: UIViewController {
                 generator.notificationOccurred(.error)
             } else if time == 0{
                 timer.invalidate()
+                self.finalScore = self.scoreLabel.text!
                 self.gameOver()
                 self.gameActive = false
                 
@@ -144,8 +146,13 @@ class ViewController: UIViewController {
     
     
     func gameOver(){
+        print(score)
         self.performSegue(withIdentifier: "endScreen", sender: nil)
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! ResultsViewController
+        vc.finalScore = self.finalScore
     }
     
     

@@ -12,10 +12,12 @@ import UIKit
 class ResultsViewController: UIViewController{
     
     @IBOutlet weak var finalScoreLabel: UILabel!
+
+    var finalScore = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        finalScoreLabel.text = finalScore
     }
     
     

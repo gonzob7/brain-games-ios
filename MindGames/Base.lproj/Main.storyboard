@@ -351,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="2051" y="117"/>
         </scene>
-        <!--Results View Controller-->
+        <!--ResultsViewController-->
         <scene sceneID="Pex-zT-bdG">
             <objects>
-                <viewController id="Gn4-FJ-2Qh" customClass="ResultsViewController" customModule="MindGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gn4-FJ-2Qh" customClass="ResultsViewController" customModule="MindGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E91-Nk-RNa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
