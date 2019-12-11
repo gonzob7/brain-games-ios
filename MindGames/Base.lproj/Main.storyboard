@@ -351,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="2051" y="117"/>
         </scene>
-        <!--Game Over View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="Pex-zT-bdG">
             <objects>
-                <viewController id="Gn4-FJ-2Qh" customClass="GameOverViewController" customModule="MindGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gn4-FJ-2Qh" customClass="ResultsViewController" customModule="MindGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E91-Nk-RNa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +412,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="playAgain:" destination="Gn4-FJ-2Qh" eventType="touchUpInside" id="0Vq-up-vx6"/>
+                                    <action selector="playAgain:" destination="Gn4-FJ-2Qh" eventType="touchUpInside" id="Lhd-43-UDc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -421,7 +421,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q22-yD-9sB"/>
                     <connections>
-                        <outlet property="finalScoreLabel" destination="hGm-OI-hf5" id="6tv-EY-CCg"/>
+                        <outlet property="finalScoreLabel" destination="hGm-OI-hf5" id="5TL-2o-1zF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDV-Mi-GQp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
